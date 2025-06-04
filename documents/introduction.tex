@@ -62,3 +62,18 @@ A code editor is a software application that allows you to write and edit your w
     \item Once installed, open VS Code and familiarize yourself with its interface. You can customize the settings and install extensions to enhance your coding experience.
 \end{enumerate}
 
+\subsubsection{Creating Your Project Files}
+Now that you have Git and a code editor installed, you can create the initial files for your website project. Follow these steps to set up your project structure:
+\begin{enumerate}
+    \item Create a new folder on your local machine where you want to store your development files (e.g., \texttt{DEV}).
+    \item Inside the \texttt{DEV} folder, right-click and open VS Code. This will open the folder in the editor, allowing you to create and manage your project files easily.
+    \item Press \texttt{Ctrl~+~Shift~+~\`} (or \texttt{Cmd~+~Shift~+~\`} on macOS) to open a new terminal window within VS Code.% chktex 14
+    \item Go to your remote repository on GitHub and copy the repository URL (e.g., \texttt{https://github.com/your-username/my-website.git}).
+    \item In the terminal, enter the following command to clone your GitHub repository:
+    \begin{verbatim}
+        git clone <repository-url>
+    \end{verbatim}
+    Replace \texttt{<repository-url>} with the URL you copied earlier. This will create a local copy of your repository in the \texttt{DEV} folder.
+    \item Click File~$\rightarrow$~Open Folder in VS Code and select the folder you just cloned. This will open your project in the editor.
+\end{enumerate}
+

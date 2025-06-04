@@ -18,15 +18,22 @@ This guide is designed to help you quickly set up a free web hosting service. Si
 - **Serverless Functions**: How to use serverless functions for backend logic without managing servers.
 - **Content Delivery Networks (CDNs)**: Using CDNs to improve site performance and reliability.
 
-## Platforms
-- **GitHub Pages**: For hosting static websites directly from a GitHub repository.
-- **Netlify**: For deploying static sites with continuous deployment from Git repositories.
-- **Vercel**: For hosting static and serverless applications with automatic scaling.
-
 I am still working on adding more platforms to this guide. Stay tuned for updates!
 
 ## Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request. Contributions are welcome!
+
+### Requirements
+- Familiarity with Markdown for documentation.
+- Latex knowledge is a plus for PDF generation.
+    - for a Latex compiler, you can use [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/).
+
+### How to Contribute
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

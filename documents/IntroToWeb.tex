@@ -1,3 +1,4 @@
+
 \newpage
 \section{How Static Websites Work}
 
@@ -25,3 +26,42 @@ When developing a static website, you typically work on your local machine using
 \subsection{How Static Websites Work}
 Static websites work by serving pre-built HTML, CSS, and JavaScript files directly to the user's browser. When a user requests a static web page, the server retrieves the corresponding HTML file and sends it to the browser.\\ The browser then interprets the HTML, applies any linked CSS styles, and executes any JavaScript code to render the page. This process is straightforward and does not require any server-side processing, making static websites fast and efficient.
 
+\begin{center}
+\begin{tikzpicture}[
+    node distance=3cm and 3cm,
+    every node/.style={font=\small\sf, align=center},
+    box/.style={draw=blue!50!black, fill=blue!10, thick, rounded corners, minimum width=3.2cm, minimum height=1.2cm},
+    filebox/.style={draw=orange!60!black, fill=orange!10, thick, rounded corners, minimum width=3.2cm, minimum height=1.2cm},
+    arrow/.style={->, very thick, >=stealth}
+]
+
+% Nodes
+\node[box] (user) {User\\(Web Browser)};
+\node[box, right=of user] (internet) {Internet};
+\node[box, right=of internet] (server) {Web Server\\(Hosting Provider)};
+\node[filebox, below=of server] (files) {Static Files:\\HTML, CSS, JS};
+
+% Arrows
+\draw[arrow] (user) -- node[above]{1. Request Page} (internet);
+\draw[arrow] (internet) -- node[above]{2. Forward Request} (server);
+\draw[arrow] (server) -- node[right]{3. Fetch Files} (files);
+
+% Return arrow from Files to Internet (left of Files to right of Internet)
+\coordinate (p1) at ($(files.west)+(-2.2,0)$);
+\coordinate (p2) at ($(internet.east)+(2.2,0)$);
+\draw[arrow] (files.west) -- (p1) |- (p2) -- (internet.east);
+\node[align=center, anchor=west, font=\small\sf] at ($(p2)+(-1.4,-2.2)$) {4. Send Files};
+
+\draw[arrow] (internet) -- node[below]{5. Deliver Page} (user);
+
+\end{tikzpicture}
+\end{center}
+
+This diagram illustrates the flow of a static website request:
+\begin{enumerate}
+    \item The user opens a web browser and requests a specific page by entering a URL.\ 
+    \item The request is sent over the internet to the web server hosting the static files.
+    \item The server retrieves the requested HTML file along with any associated CSS and JavaScript files.
+    \item The server sends these files back to the user's browser.
+    \item The browser renders the page, applying styles and executing scripts as needed.
+\end{enumerate}

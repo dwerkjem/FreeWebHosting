@@ -42,17 +42,25 @@ Static websites work by serving pre-built HTML, CSS, and JavaScript files direct
 \node[filebox, below=of server] (files) {Static Files:\\HTML, CSS, JS};
 
 % Arrows
-\draw[arrow] (user) -- node[above]{1. Request Page} (internet);
+\draw[arrow] 
+  ([yshift=5pt]user.east) -- node[above, yshift=2pt]{1. Request Page} 
+  ([yshift=5pt]internet.west);
+
+\draw[arrow] 
+  ([yshift=-5pt]internet.west) -- node[below, yshift=-2pt]{5. Deliver Page} 
+  ([yshift=-5pt]user.east);
+
 \draw[arrow] (internet) -- node[above]{2. Forward Request} (server);
 \draw[arrow] (server) -- node[right]{3. Fetch Files} (files);
 
-% Return arrow from Files to Internet (left of Files to right of Internet)
-\coordinate (p1) at ($(files.west)+(-2.2,0)$);
-\coordinate (p2) at ($(internet.east)+(2.2,0)$);
-\draw[arrow] (files.west) -- (p1) |- (p2) -- (internet.east);
-\node[align=center, anchor=west, font=\small\sf] at ($(p2)+(-1.4,-2.2)$) {4. Send Files};
-
-\draw[arrow] (internet) -- node[below]{5. Deliver Page} (user);
+% Step 4: Return arrow, now solid black and not dashed or orange
+\draw[arrow] 
+  (files.west) 
+  to[out=180, in=-90] 
+  node[midway, below left, font=\small\sf] {4. Send Files}
+  ($(internet.south)+(0,-1.5)$) 
+  to[out=90, in=270] 
+  (internet.south);
 
 \end{tikzpicture}
 \end{center}

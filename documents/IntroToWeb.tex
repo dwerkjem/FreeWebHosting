@@ -26,7 +26,9 @@ When developing a static website, you typically work on your local machine using
 \subsection{How Static Websites Work}
 Static websites work by serving pre-built HTML, CSS, and JavaScript files directly to the user's browser. When a user requests a static web page, the server retrieves the corresponding HTML file and sends it to the browser.\\ The browser then interprets the HTML, applies any linked CSS styles, and executes any JavaScript code to render the page. This process is straightforward and does not require any server-side processing, making static websites fast and efficient.
 
-\begin{center}
+\vspace*{1cm}
+
+\noindent\hspace*{-1.6cm}
 \begin{tikzpicture}[
     node distance=3cm and 3cm,
     every node/.style={font=\small\sf, align=center},
@@ -53,7 +55,6 @@ Static websites work by serving pre-built HTML, CSS, and JavaScript files direct
 \draw[arrow] (internet) -- node[above]{2. Forward Request} (server);
 \draw[arrow] (server) -- node[right]{3. Fetch Files} (files);
 
-% Step 4: Return arrow, now solid black and not dashed or orange
 \draw[arrow] 
   (files.west) 
   to[out=180, in=-90] 
@@ -63,7 +64,8 @@ Static websites work by serving pre-built HTML, CSS, and JavaScript files direct
   (internet.south);
 
 \end{tikzpicture}
-\end{center}
+
+\vspace*{1cm}
 
 This diagram illustrates the flow of a static website request:
 \begin{enumerate}

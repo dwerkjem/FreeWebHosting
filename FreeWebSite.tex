@@ -2,10 +2,45 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{bookmark}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
 
 \title{Free Website Guide}
 \author{}
 \date{\today}
+
+% Definition environment with colored box
+\newtcolorbox{definitionbox}{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title=Definition,
+  left=1mm, right=1mm, top=1mm, bottom=1mm,
+  boxrule=0.8pt,
+  arc=3pt,
+  enhanced,
+}
+
+\newenvironment{definition}[1][]
+  {\begin{definitionbox}[#1]}
+  {\end{definitionbox}}
+
+% Concept environment with colored box
+\newtcolorbox{conceptbox}{
+  colback=green!5!white,
+  colframe=green!75!black,
+  fonttitle=\bfseries,
+  title=Concept,
+  left=1mm, right=1mm, top=1mm, bottom=1mm,
+  boxrule=0.8pt,
+  arc=3pt,
+  enhanced,
+}
+
+\newenvironment{concept}[1][]
+  {\begin{conceptbox}[#1]}
+  {\end{conceptbox}}
 
 \begin{document}
 
@@ -16,5 +51,5 @@
 % all pages should be in the documents folder
 \input{documents/preface.tex}
 \input{documents/introduction.tex}
-
+\input{documents/IntroToWeb.tex}
 \end{document}

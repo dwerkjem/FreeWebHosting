@@ -67,13 +67,18 @@ Now that you have Git and a code editor installed, you can create the initial fi
 \begin{enumerate}
     \item Create a new folder on your local machine where you want to store your development files (e.g., \texttt{DEV}).
     \item Inside the \texttt{DEV} folder, right-click and open VS Code. This will open the folder in the editor, allowing you to create and manage your project files easily.
-    \item Press \texttt{Ctrl~+~Shift~+~\`} (or \texttt{Cmd~+~Shift~+~\`} on macOS) to open a new terminal window within VS Code.% chktex 14
-    \item Go to your remote repository on GitHub and copy the repository URL (e.g., \texttt{https://github.com/your-username/my-website.git}).
-    \item In the terminal, enter the following command to clone your GitHub repository:
-    \begin{verbatim}
-        git clone <repository-url>
-    \end{verbatim}
-    Replace \texttt{<repository-url>} with the URL you copied earlier. This will create a local copy of your repository in the \texttt{DEV} folder.
-    \item Click File~$\rightarrow$~Open Folder in VS Code and select the folder you just cloned. This will open your project in the editor.
 \end{enumerate}
 
+
+\subsection{Connecting Your Local Repository to GitHub}
+To connect your local repository to the GitHub repository you created earlier, you'll need to follow these steps:
+\begin{enumerate}
+    \item Open a terminal or command prompt in your project folder (you can do this directly in VS Code by selecting ``Terminal'' from the top menu and then ``New Terminal'').
+    \item Type the following command to configure your Git username and email (replace with your own details):
+    \begin{verbatim}
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+\end{verbatim}
+    \item Next, clone your GitHub repository to your local machine by going to source control in VS Code, clicking on the ``Clone Repository'' button, and entering the URL of your GitHub repository \\ (e.g., \texttt{https://github.com/yourusername/my-website.git}).
+    \item Once the repository is cloned, you will have a local copy of your GitHub repository in your project folder.
+\end{enumerate}

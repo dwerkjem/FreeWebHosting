@@ -1,48 +1,63 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage{amsthm}
-\usepackage{xcolor}
-\usepackage[most]{tcolorbox}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc}
+\usepackage[most,skins]{tcolorbox}
+\usetikzlibrary{positioning,calc}
+\usepackage{fontawesome5}
 
 \title{Free Website Guide}
 \author{}
 \date{\today}
 
-% Definition environment with colored box
-\newtcolorbox{definitionbox}{
+% Definition Box
+% Definition Box
+\newtcolorbox{definition}[1]{%
   colback=blue!5!white,
-  colframe=blue!75!black,
-  fonttitle=\bfseries,
-  title=Definition,
-  left=1mm, right=1mm, top=1mm, bottom=1mm,
-  boxrule=0.8pt,
-  arc=3pt,
+  colframe=blue!80!black,
+  fonttitle=\sffamily\bfseries\large,
+  fontupper=\sffamily,
+  title=Definition: {\usefont{T1}{pzc}{m}{it}#1},
+  boxrule=1pt,
+  arc=4pt,
+  left=3mm,
+  right=3mm,
+  top=2mm,
+  bottom=2mm,
   enhanced,
+  sharp corners=south,
+  drop shadow,
+  before skip=10pt,
+  after skip=10pt,
+  halign=justify,
+  valign=center
 }
 
-\newenvironment{definition}[1][]
-  {\begin{definitionbox}[#1]}
-  {\end{definitionbox}}
-
-% Concept environment with colored box
-\newtcolorbox{conceptbox}{
+% Concept Box
+\newtcolorbox{concept}[1]{%
   colback=green!5!white,
-  colframe=green!75!black,
-  fonttitle=\bfseries,
-  title=Concept,
-  left=1mm, right=1mm, top=1mm, bottom=1mm,
-  boxrule=0.8pt,
-  arc=3pt,
+  colframe=green!80!black,
+  fonttitle=\sffamily\bfseries\large,
+  fontupper=\sffamily,
+  title=Concept: {\usefont{T1}{pzc}{m}{it}#1},
+  boxrule=1pt,
+  arc=4pt,
+  left=3mm,
+  right=3mm,
+  top=2mm,
+  bottom=2mm,
   enhanced,
+  sharp corners=south,
+  drop shadow,
+  before skip=10pt,
+  after skip=10pt,
+  halign=justify,
+  valign=center
 }
 
-\newenvironment{concept}[1][]
-  {\begin{conceptbox}[#1]}
-  {\end{conceptbox}}
 
 \begin{document}
 
@@ -50,8 +65,12 @@
 
 \tableofcontents
 \newpage
-% all pages should be in the documents folder
+
+% Example usage (optional preview)
+
+% Main contents
 \input{documents/preface.tex}
 \input{documents/introduction.tex}
 \input{documents/IntroToWeb.tex}
+
 \end{document}

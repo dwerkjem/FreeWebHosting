@@ -4,7 +4,9 @@
         "Flexbox",
         "Neilson",
         "pdflatex",
+        "stylesheet",
         "synctex",
+        "tagname",
         "Vercel"
     ],
     "latex-workshop.latex.outDir": ".",

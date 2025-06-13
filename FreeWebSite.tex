@@ -10,6 +10,9 @@
 \usepackage{fontawesome5}
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{fancyvrb}
+
 
 \title{Free Website Guide}
 \author{}
@@ -22,6 +25,55 @@
     pdftitle={Free Website Guide},
     pdfpagemode=FullScreen,
 }
+
+% listings setup for code snippets
+
+\definecolor{codebg}{rgb}{0.97,0.97,0.97}
+\definecolor{codeframe}{rgb}{0.2,0.2,0.7}
+
+\lstset{
+  language=HTML,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=lines,
+  framexleftmargin=5pt,
+  framextopmargin=2pt,
+  framexbottommargin=2pt,
+  rulecolor=\color{codeframe},
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b,
+  tabsize=2,
+  numbers=none,
+  showstringspaces=false,
+  extendedchars=true,
+  escapeinside={\(*}{*\)},
+  fancyvrb=true,
+  firstnumber=1,
+  xleftmargin=15pt,
+  frame=tb,
+  framerule=1pt,
+  belowcaptionskip=10pt,
+  abovecaptionskip=10pt,
+  breakautoindent=true,
+  breakindent=0pt,
+  morecomment=[l]{//},
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  title=\lstname
+}
+\lstdefinestyle{withbreaks}{
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=lines,
+  framesep=5pt,
+  rulesepcolor=\color{codeframe},
+  framexleftmargin=5pt,
+  framextopmargin=5pt,
+  framexbottommargin=5pt
+}
+
 
 % Set up the document layout
 

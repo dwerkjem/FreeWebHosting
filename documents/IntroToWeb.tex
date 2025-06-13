@@ -76,3 +76,37 @@ This diagram illustrates the flow of a static website request:
     \item The browser renders the page, applying styles and executing scripts as needed.
 \end{enumerate}
 
+\subsection{Making your First Static Website}
+
+Before you can create your first static website, you need to understand some basic concepts. Below is a simple HTML structure that you can use as a starting point for your static website. This example includes the essential elements of an HTML document, such as the doctype declaration, head section, and body content. I will also provide a brief explanation of each part of the code.
+
+\begin{lstlisting}[language=html, caption=Basic HTML Structure]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Static Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My First Static Website</h1>
+    </header>
+    <main>
+        <p>This is a simple static website created using HTML and CSS.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 My First Static Website</p>
+    </footer>
+</body>
+</html>  
+\end{lstlisting}
+
+\subsubsection{Explanation of the Code}
+
+Notice that all the lines so far start with a \textit{<} and end with a \textit{>}. This is a fundamental characteristic of HTML, where elements are defined by tags. 
+
+\begin{concept}{Tags in HTML}
+Tags are the building blocks of HTML.\ They are used to define elements on a web page. Each tag typically consists of an opening tag (e.g., \texttt{<tagname>}) and a closing tag (e.g., \texttt{</tagname>}). The content between the opening and closing tags is what will be displayed on the web page. Some tags, like \texttt{<img>}, are self-closing and do not require a closing tag.\ example: \texttt{<img src="image.jpg" alt="Description">} where \texttt{src} is the source of the image and \texttt{alt} is the alternative text that describes the image. % chktex 18
+\end{concept}
